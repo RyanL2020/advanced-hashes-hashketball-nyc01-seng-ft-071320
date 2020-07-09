@@ -174,7 +174,7 @@ def player_numbers(data)
     end
   end
   return output
-end 
+end
 
 def player_stats(data)
   game_hash.each do |team, team_data|
@@ -182,7 +182,7 @@ def player_stats(data)
       if key == :players
         value.each do |player|
           if input == player[:player_name]
-            player.delete(:player_name) 
+            player.delete(:player_name)
             return player
           end
         end
