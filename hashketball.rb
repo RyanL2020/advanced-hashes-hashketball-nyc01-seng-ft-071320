@@ -175,3 +175,18 @@ def player_numbers(data)
   end
   return output
 end 
+
+def player_stats(data)
+  game_hash.each do |team, team_data|
+    team_data.each do |key, value|
+      if key == :players
+        value.each do |player|
+          if input == player[:player_name]
+            player.delete(:player_name) 
+            return player
+          end
+        end
+      end
+    end
+  end
+end
