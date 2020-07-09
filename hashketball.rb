@@ -163,9 +163,9 @@ end
 def player_numbers(data)
   output = []
   game_hash.each do |team, team_data|
-    if team_data[:team_name] == data 
+    if team_data[:team_name] == data
       team_data.each do |key, value|
-        if key == :players 
+        if key == :players
           value.each do |player|
             output.push(player[:number])
           end
@@ -173,5 +173,5 @@ def player_numbers(data)
       end
     end
   end
-  return output 
+  return output
 end 
